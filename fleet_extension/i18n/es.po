@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-22 10:28+0000\n"
-"PO-Revision-Date: 2021-11-22 10:28+0000\n"
+"POT-Creation-Date: 2022-07-04 15:42+0000\n"
+"PO-Revision-Date: 2022-07-04 15:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,7 @@ msgstr ""
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__license_plate
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__license_plate
-#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_form
-#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_search
+#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_form2
 #: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_tree
 #: model_terms:ir.ui.view,arch_db:fleet_extension.search_product_lot_filter
 msgid "Actual license plate"
@@ -40,6 +39,8 @@ msgstr "Marca"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__chassis_model_id
+#: model:ir.model.fields,field_description:fleet_extension.field_product_product__chassis_model_id
+#: model:ir.model.fields,field_description:fleet_extension.field_product_template__chassis_model_id
 #: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_search
 msgid "Chassis Model"
 msgstr "Modelo de Chasis"
@@ -57,6 +58,11 @@ msgid "Collection"
 msgstr "Colección"
 
 #. module: fleet_extension
+#: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: fleet_extension
 #: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_form
 msgid "Contract"
 msgstr "Contrato"
@@ -69,14 +75,12 @@ msgstr "País"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_collection__create_uid
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_type__create_uid
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_range__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_collection__create_date
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_type__create_date
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_range__create_date
 msgid "Created on"
 msgstr "Creado el"
@@ -97,7 +101,6 @@ msgstr "Cilindrada"
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__display_name
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model__display_name
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_collection__display_name
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_type__display_name
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_range__display_name
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__display_name
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__display_name
@@ -106,7 +109,7 @@ msgstr "Nombre mostrado"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__tag_ids
-#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_form
+#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_form2
 msgid "Distribution"
 msgstr "Distribución"
 
@@ -124,7 +127,6 @@ msgstr "Eléctrico"
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__old_license_plate
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__old_license_plate
-#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_search
 #: model_terms:ir.ui.view,arch_db:fleet_extension.search_product_lot_filter
 msgid "First license plate"
 msgstr "Primera matrícula"
@@ -160,13 +162,12 @@ msgstr "Garantías"
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_product_product__home_guarantee
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__home_guarantee
+#: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__home_guarantee
 msgid "Home guarantee"
 msgstr "Garantía de vivienda"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__home_guarantee_date
-#: model:ir.model.fields,field_description:fleet_extension.field_product_product__home_guarantee_date
-#: model:ir.model.fields,field_description:fleet_extension.field_product_template__home_guarantee_date
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__home_guarantee_date
 msgid "Home guarantee date"
 msgstr "Fecha de la garantía de vivienda"
@@ -174,15 +175,20 @@ msgstr "Fecha de la garantía de vivienda"
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_product_product__home_guarantee_unit
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__home_guarantee_unit
+#: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__home_guarantee_unit
 msgid "Home guarantee unit"
 msgstr "Unidad de garantía de vivienda"
 
 #. module: fleet_extension
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__horsepower
 #: model:ir.model.fields,field_description:fleet_extension.field_product_product__horsepower
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__horsepower
 msgid "Horsepower"
 msgstr "Caballos de fuerza"
+
+#. module: fleet_extension
+#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__house_number
+msgid "House Number"
+msgstr ""
 
 #. module: fleet_extension
 #: model:ir.model.fields.selection,name:fleet_extension.selection__product_template__fuel_type__hybrid
@@ -193,7 +199,6 @@ msgstr "Híbrido"
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__id
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model__id
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_collection__id
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_type__id
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_range__id
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__id
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__id
@@ -201,9 +206,9 @@ msgid "ID"
 msgstr ""
 
 #. module: fleet_extension
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__key_amount
-msgid "Keys amount"
-msgstr "Número de llave"
+#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__key_number
+msgid "Key Number"
+msgstr ""
 
 #. module: fleet_extension
 #: model:ir.model.fields.selection,name:fleet_extension.selection__product_template__fuel_type__lpg
@@ -214,7 +219,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle____last_update
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model____last_update
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_collection____last_update
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_type____last_update
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_range____last_update
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template____last_update
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot____last_update
@@ -223,14 +227,12 @@ msgstr "Última modificación el"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_collection__write_uid
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_type__write_uid
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_range__write_uid
 msgid "Last Updated by"
 msgstr "Actualizado por"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_collection__write_date
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_type__write_date
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_range__write_date
 msgid "Last Updated on"
 msgstr "Actualizado el"
@@ -291,13 +293,12 @@ msgstr "Modelo del motor"
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_product_product__motor_guarantee
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__motor_guarantee
+#: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__motor_guarantee
 msgid "Motor guarantee"
 msgstr "Garantía de motor"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__motor_guarantee_date
-#: model:ir.model.fields,field_description:fleet_extension.field_product_product__motor_guarantee_date
-#: model:ir.model.fields,field_description:fleet_extension.field_product_template__motor_guarantee_date
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__motor_guarantee_date
 msgid "Motor guarantee date"
 msgstr "Fecha de garantía de motor"
@@ -305,6 +306,7 @@ msgstr "Fecha de garantía de motor"
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_product_product__motor_guarantee_unit
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__motor_guarantee_unit
+#: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__motor_guarantee_unit
 msgid "Motor guarantee unit"
 msgstr "Unidad de garantía de motor"
 
@@ -326,12 +328,6 @@ msgstr "Nombre"
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__sleeping_places
 msgid "Number of sleeping places"
 msgstr "Número de plazas para dormir"
-
-#. module: fleet_extension
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__product_id
-#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_search
-msgid "Product"
-msgstr "Producto"
 
 #. module: fleet_extension
 #: model:ir.model,name:fleet_extension.model_product_template
@@ -358,6 +354,7 @@ msgstr "Precio de compra"
 #: model:ir.actions.act_window,name:fleet_extension.action_fleet_vehicle_range
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__range_id
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model__range_id
+#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_model_view_search
 #: model_terms:ir.ui.view,arch_db:fleet_extension.view_type_tree
 msgid "Range"
 msgstr "Gama"
@@ -379,13 +376,6 @@ msgid "Selling price"
 msgstr "Precio de venta"
 
 #. module: fleet_extension
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__serial_number_id
-msgid "Serial number"
-msgstr "Número de serie"
-
-#. module: fleet_extension
-#: model:ir.actions.act_window,name:fleet_extension.action_fleet_vehicle_model_type
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model_type__name
 #: model_terms:ir.ui.view,arch_db:fleet_extension.search_product_lot_filter
 msgid "Type"
 msgstr "Tipo"
@@ -397,8 +387,7 @@ msgstr "Tapicería"
 
 #. module: fleet_extension
 #: model:ir.model,name:fleet_extension.model_fleet_vehicle
-#: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__vehicle_id
-#: model_terms:ir.ui.view,arch_db:fleet_extension.view_production_lot_form
+#: model_terms:ir.ui.view,arch_db:fleet_extension.view_production_lot_form2
 msgid "Vehicle"
 msgstr "Vehículo"
 
@@ -414,30 +403,24 @@ msgid "Vehicle collection"
 msgstr "Colección del vehículo"
 
 #. module: fleet_extension
-#: model_terms:ir.ui.view,arch_db:fleet_extension.view_production_lot_form
+#: model_terms:ir.ui.view,arch_db:fleet_extension.view_production_lot_form2
 msgid "Vehicle guarantee"
 msgstr "Garantía del vehículo"
 
 #. module: fleet_extension
-#: model:ir.model,name:fleet_extension.model_fleet_vehicle_model_type
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__type_id
-#: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle_model__type_id
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__type_id
-#: model:ir.ui.menu,name:fleet_extension.menu_fleet_vehicle_model_type
-#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_search
 msgid "Vehicle type"
 msgstr "Tipo de vehículo"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_product_product__watertightness_guarantee
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__watertightness_guarantee
+#: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__watertightness_guarantee
 msgid "Watertightness guarantee"
 msgstr "Garantía de estanqueidad"
 
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_fleet_vehicle__watertightness_guarantee_date
-#: model:ir.model.fields,field_description:fleet_extension.field_product_product__watertightness_guarantee_date
-#: model:ir.model.fields,field_description:fleet_extension.field_product_template__watertightness_guarantee_date
 #: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__watertightness_guarantee_date
 msgid "Watertightness guarantee date"
 msgstr "Fecha de garantía de estanqueidad"
@@ -445,6 +428,7 @@ msgstr "Fecha de garantía de estanqueidad"
 #. module: fleet_extension
 #: model:ir.model.fields,field_description:fleet_extension.field_product_product__watertightness_guarantee_unit
 #: model:ir.model.fields,field_description:fleet_extension.field_product_template__watertightness_guarantee_unit
+#: model:ir.model.fields,field_description:fleet_extension.field_stock_production_lot__watertightness_guarantee_unit
 msgid "Watertightness guarantee unit"
 msgstr "Unidad de garantía de estanqueidad"
 
@@ -456,6 +440,6 @@ msgid "Year"
 msgstr "Año"
 
 #. module: fleet_extension
-#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_form
+#: model_terms:ir.ui.view,arch_db:fleet_extension.fleet_vehicle_view_form2
 msgid "e.g. PAE 326"
 msgstr "p.ej. PAE 326"
